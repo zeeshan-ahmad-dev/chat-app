@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Chat Room</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Room</h1>
+            <div class="input-group">
+                <input id="message" type="text" placeholder="Type your message...">
+                <button id="sendBtn">Send</button>
+            </div>
+            <h4>Details</h4>
+            <div class="input-group flex-col">
+                <div>
+                    <input id="room" type="text" placeholder="Enter room name...">
+                    <input id="username" type="text" placeholder="Enter your Username...">
+                </div>
+                <button id="joinRoom">Join Room</button>
+            </div>
+            <button id="leaveRoom" class="leave-btn">Leave Room</button>
+        </div>
+
+        <div class="messageBox">
+            <h1>Messages</h1>
+            <ul>
+                <div class="typing-indicator" id="typingIndicator">User is typing...</div>
+            </ul>
+        </div>
+
+        <div class="messageBox">
+            <h1>Online Users In Room</h1>
+            <ul class="onlineUsers">
+            </ul>
+        </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
